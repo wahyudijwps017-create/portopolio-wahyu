@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional Wahyu</title>
+    <style>
+        /* SENTUHAN HALUS: Membuat scrolling jadi mulus saat diklik */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-color: #e24aaf; 
+            --secondary-color: #3da145; 
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* BAGIAN HERO DENGAN FOTO LATAR BELAKANG */
+        .hero {
+            /* GANTI 'background.jpg' dengan nama file foto Anda di folder */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('wahyu.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: fixed; 
+            color: rgb(155, 162, 172);
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border: 1px solid var(--primary-color);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* STYLE UNTUK RIWAYAT (TIMELINE) */
+        .timeline {
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 15px;
+            height: 15px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            position: absolute;
+            left: -29px;
+            top: 5px;
+        }
+
+        .btn-contact {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--secondary-color);
+            color: white;
+            margin-top: 50px;
+        }
+
+        section, .container {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#about">Tentang</a>
+            <a href="#keahlian">Keahlian</a>
+            <a href="#riwayat">Riwayat</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Halo, Saya WAHYU</h1>
+        <p>Tenaga Profesional di Bidang Pemetaan, Akuntansi, & Administrasi</p>
+    </section>
+
+    <div class="container" id="about">
+        <h2>Tentang Saya</h2>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <p>Selamat datang di website portofolio Saya sedang mencari kerja</p>
+        </div>
+    </div>
+
+    <div id="keahlian">
+        <h2>Keahlian & Kompetensi</h2>
+        <div class="project-grid">
+            <a href="#detail-pemetaan" class="card-link">
+                <div class="card">
+                    <h3>📍 Pemetaan & Surveyor</h3>
+                    <p>Melakukan pengukuran lapangan, pemetaan wilayah, dan penggunaan alat survei secara presisi. (Klik detail)</p>
+                </div>
+            </a>
+
+            <a href="#detail-akuntansi" class="card-link">
+                <div class="card">
+                    <h3>📊 Akuntansi & Admin</h3>
+                    <p>Mengelola laporan keuangan, pembukuan, serta pengaturan dokumen administrasi secara rapi. (Klik detail)</p>
+                </div>
+            </a>
+
+            <a href="#detail-analisis" class="card-link">
+                <div class="card">
+                    <h3>📉 Analisis Data</h3>
+                    <p>Mampu mengolah data mentah menjadi informasi yang berguna bagi perusahaan. (Klik detail)</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container" id="riwayat">
+        <h2>Riwayat Pendidikan </h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3 style="margin:0;">[Universitas Mulawarman]</h3>
+                <p style="margin:5px 0; font-weight:bold; color:#666;">2020 - 2025</p>
+                <p>Fresh Graduate Sarjana Sains Fisika </p>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="container" id="detail-pemetaan">
+    <h2>Hasil Kerja: Pemetaan</h2>
+    
+    <div class="card" style="margin-bottom: 30px;">
+        <p>Sebagai tenaga pemetaan, saya terbiasa mengolah data lapangan menjadi visualisasi peta yang akurat untuk berbagai kebutuhan industri.</p>
+    </div>
+
+    <div class="project-grid">
+        
+        <div class="card">
+            <img src="peta tuplah.jpg" alt="Peta Topografi" style="width: 100%; border-radius: 8px; margin-bottom: 15px; border: 1px solid #ddd;">
+            <h3>Peta Topografi Area Proyek</h3>
+            <p><strong>Deskripsi:</strong> Peta ini menunjukkan kontur ketinggian lahan seluas 50 hektar untuk perencanaan drainase. Dibuat menggunakan data GPS dan diolah dengan AutoCAD/ArcGIS.</p>
+        </div>
+
+        <div class="card">
+            <img src="tuplah2.jpg" alt="Peta Perkebunan" style="width: 100%; border-radius: 8px; margin-bottom: 15px; border: 1px solid #ddd;">
+            <h3>Pemetaan Lahan Perkebunan</h3>
+            <p><strong>Deskripsi:</strong> Visualisasi batas wilayah dan kesehatan tanaman menggunakan foto udara (Drone). Berguna untuk estimasi hasil panen dan pemupukan presisi.</p>
+        </div>
+
+    </div>
+</div>
+
+    <div class="container" id="detail-akuntansi">
+        <h2>Hasil Kerja: Akuntansi & Admin</h2>
+        <div class="card">
+            <p>Pengalaman administratif dan finansial:</p>
+            <ul>
+                <li>Penyusunan Laporan Laba Rugi bulanan.</li>
+                <li>Manajemen database kantor menggunakan Excel tingkat lanjut.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container" id="detail-analisis">
+        <h2>Hasil Kerja: Analisis Data</h2>
+        <div class="card">
+            <p>Kemampuan analisis:</p>
+            <ul>
+                <li>Visualisasi data survei lapangan.</li>
+                <li>Audit data administratif untuk efisiensi kerja.</li>
+            </ul>
+        </div>
+    </div>
+
+  <div class="container" id="contact">
+    <h2>Hubungi Saya</h2>
+    <p style="text-align: center;">Saya terbuka untuk peluang kerja maupun proyek lepasan. Silakan hubungi saya melalui:</p>
+    
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+        
+        <a href="https://wa.me/6283140590880?text=Halo%20Wahyu,%20saya%20melihat%20portofolio%20Anda%20dan%20ingin%20bertanya..." 
+           target="_blank" 
+           class="btn-contact" 
+           style="margin: 0; background-color: #25d366; display: flex; align-items: center; gap: 10px;">
+           <span>💬</span> Chat WhatsApp
+        </a>
+
+        <a href="mailto:emailanda@gmail.com" 
+           class="btn-contact" 
+           style="margin: 0; background-color: #0078d4; display: flex; align-items: center; gap: 10px;">
+           <span>📧</span> Kirim Email
+        </a>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 25px; font-size: 0.9rem; color: #666;">
+        <p>Atau salin kontak manual:<br>
+        <strong>wahyudijwps017@gmail.com</strong> | <strong>+62 831-4059-0880</strong></p>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2025 Wahyu | Portofolio ini dibuat sendiri oleh wahyu menggunakan html dan visual stuido code</p>
+    </footer>
+
+</body>
+</html>
